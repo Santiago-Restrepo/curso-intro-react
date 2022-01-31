@@ -1,0 +1,15 @@
+input{
+    margin: 1rem auto;
+    width: 10rem;
+    padding: .5rem 1rem;
+    border: none;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.185);
+    border-radius: .5rem;
+    font-size: 1rem;
+    outline: 2px solid #FB9F89;
+    color: #a8a8a7;
+}
+input::placeholder{
+    font-family: 'Titillium Web';
+    color: #a8a8a7;
+}

@@ -1,0 +1,9 @@
+.todoList{
+    display: flex;
+    justify-content: center;
+}
+
+.todoList ul{
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,17 @@
+h1{
+    background: linear-gradient(90deg,#81AE9D,#21A179);
+    -webkit-background-clip: text;
+    color: transparent;  
+    font-weight: 400;
+}
+
+h3{
+    color: #FB9F89;
+    font-weight: 600;
+}
+
+
+h1, h3{
+    text-align: center;
+    margin: 0 1rem;
+}

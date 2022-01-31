@@ -8,23 +8,34 @@ import { CreateTodoButton } from "./CreateTodoButton";
 const todos = [
   {
     text:'Cortar cebolla',
-    completed: false
+    completed: true
   },{
     text:'Tomar el curso de intro a React',
     completed: false
   },{
     text:'Llorar con la llorona',
-    completed: false
+    completed: true
   },
 ]
 function App() {
+
+  const countCompletedTasks = ()=>{
+    let counter = 0;
+    todos.map(task =>{
+      if(task.completed){
+        counter ++;
+      }
+    })
+    return counter
+  }
+
   return (
     <>
-      <TodoCounter/>
+      <TodoCounter completed={countCompletedTasks()} limit={todos.length}/>
       <TodoSearch/>
       <TodoList>
         {todos.map(todo => (
-          <TodoItem key={todo.text} text={todo.text}/>
+          <TodoItem key={todo.text} text={todo.text} completed={todo.completed}/>
         ))}
       </TodoList>
       <CreateTodoButton/>

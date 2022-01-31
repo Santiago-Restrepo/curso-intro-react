@@ -1,11 +1,12 @@
 import React from "react";
+import './TodoItem.css'
 
 function TodoItem(props){
     return(
-        <li>
-            <span>C</span>
+        <li className={props.completed ? 'checked': ''}>
+            <span className="check"></span>
             <p>{props.text}</p>
-            <span>X</span>
+            <span className="closeButton">X</span>
         </li>
     )
 }
