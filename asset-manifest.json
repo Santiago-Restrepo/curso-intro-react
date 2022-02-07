@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Santiago-Restrepo/curso-intro-react/static/css/main.a7164a1f.css",
+    "main.js": "/Santiago-Restrepo/curso-intro-react/static/js/main.42cfc33c.js",
+    "index.html": "/Santiago-Restrepo/curso-intro-react/index.html",
+    "main.a7164a1f.css.map": "/Santiago-Restrepo/curso-intro-react/static/css/main.a7164a1f.css.map",
+    "main.42cfc33c.js.map": "/Santiago-Restrepo/curso-intro-react/static/js/main.42cfc33c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7164a1f.css",
+    "static/js/main.42cfc33c.js"
+  ]
+}
