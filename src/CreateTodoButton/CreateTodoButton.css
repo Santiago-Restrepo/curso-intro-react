@@ -1,4 +1,8 @@
-button{
+.addButton{
+    z-index: 2;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
     width: 5rem;
     margin: 0 auto;
     background-color: #21a179;
@@ -7,4 +11,18 @@ button{
     font-size: 1.1rem;
     font-weight: 400;
     border-radius: .3rem;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+
+.addButton.close {
+    background-color: #c92626;
+    color: #b5c7c0;
+}
+
+@media screen and (min-width:1024px) {  
+    .addButton:hover{
+        transform: scale(.9);
+    }
 }

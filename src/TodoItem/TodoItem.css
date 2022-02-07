@@ -19,6 +19,7 @@ li .check{
     border-radius: 100%;
     background: linear-gradient(90deg,#e96e50,#FB9F89);
     margin-right: .5rem;
+    cursor: pointer;
 }
 li .check::before{
     position: absolute;
@@ -62,4 +63,5 @@ li .closeButton{
     background-color: #e96f503a;
     color: #e96e50;
     font-weight: 500;
+    cursor: pointer;
 }

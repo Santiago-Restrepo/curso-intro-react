@@ -1,35 +1,41 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TodoContext } from "../TodoContext";
 import {TodoCounter} from '../TodoCounter'
 import { TodoItem } from "../TodoItem";
 import { TodoList } from "../TodoList";
 import { TodoSearch } from "../TodoSearch";
 import { CreateTodoButton } from "../CreateTodoButton";
+import { Modal } from "../Modal";
+import { TodoForm } from "../TodoForm";
 
-export const AppUi = ({
-    todos,
-    searchValue,
-    setSearchValue,
-    searchedTodos,
-    setTodos,
-})=>{
+export const AppUi = ()=>{
+
+    const {todos, setTodos, searchedTodos, modalOpened} = useContext(TodoContext);
     return(
         <>
-            <TodoCounter completed={todos.reduce((total, todo) => (todo.completed ? total+1 : total), 0 )} limit={todos.length}/>
-            <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue}/>
+            <TodoCounter/>
+            <TodoSearch />
             <TodoList>
                 {
-                searchedTodos.length !== 0 ?
-                searchedTodos.map(todo => {
-                return <TodoItem key={todo.text} text={todo.text} completed={todo.completed} setTodos={setTodos} todos={todos}/>
-                })
-                : todos.length !== 0 ? 
-                <h3 className="errorMessage">⚠️ Not founded ⚠️</h3>
-                :
-                <h3 className="errorMessage">There are no Todo's</h3>
-
+                    searchedTodos.length !== 0 ?
+                    searchedTodos.map(todo => {
+                    return <TodoItem key={todo.text} text={todo.text} completed={todo.completed} setTodos={setTodos} todos={todos}/>
+                    })
+                    : todos.length !== 0 ? 
+                    <h3 className="errorMessage">⚠️ Not founded ⚠️</h3>
+                    :
+                    <h3 className="errorMessage">There are no Todo's</h3>
                 }
             </TodoList>
             <CreateTodoButton/>
+            {
+                modalOpened &&
+                <>
+                    <Modal>
+                        <TodoForm/>
+                    </Modal>
+                </>
+            }
         </>
     )
 }

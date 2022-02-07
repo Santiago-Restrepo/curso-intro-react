@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TodoContext } from "../TodoContext";
 import './CreateTodoButton.css'
 
 function CreateTodoButton(setTodos, todos){
-    const addTodo = (setTodos, todos)=>{
-        // const todoIndex = todos.findIndex(todo => todo.text === text);
-        // let newTodos = [...todos];
-        // newTodos.splice(todoIndex,1);
-        // localStorage.setItem('TODOS', JSON.stringify(newTodos));
-        // setTodos(newTodos);
-    }
+
+    const {setModalOpened, modalOpened} = useContext(TodoContext);
+    // const addTodo = (setTodos, todos)=>{
+    //     
+    // }
     return(
-        <button onClick={()=>addTodo(setTodos,todos)}>+</button>
+        <>
+            {
+                !modalOpened ?
+                <button className="addButton" onClick={()=>setModalOpened(true)}>+</button>
+                :
+                <button onClick={()=>setModalOpened(false)} className="addButton close">x</button>
+
+            
+            } 
+        </>
     )
 }
 

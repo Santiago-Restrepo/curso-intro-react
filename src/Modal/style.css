@@ -1,0 +1,50 @@
+.ModalBackground{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+
+.ModalBackground form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.ModalBackground form textarea{
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+.ModalBackground form label{
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+.ModalBackground form button{
+    width: 5rem;
+    margin: .5rem;
+    padding: .3rem;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: .3rem;
+    transition: .5s ease;
+    cursor: pointer;
+    background-color: #21a179;
+}
+
+.ModalBackground form button:nth-child(1){
+    background-color: #cc3434;
+}
